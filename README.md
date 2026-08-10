@@ -1,2 +1,6 @@
-# web-231
-Programming assignments for WEB 231 Enterprise JavaScript I
+# WEB 231 Enterprise JavaScript I
+
+## Contributors
+
+- Professor Richard Krasso
+- Ammar Ahmed
