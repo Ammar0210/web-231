@@ -1,0 +1,292 @@
+/* ==================================================
+   TIMED PRACTICE QUIZ - STYLESHEET
+   ================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+header {
+  background: #1f3c88;
+  color: #fff;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+header h1,
+header p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header h1 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+header p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+section {
+  background: #ffffff;
+  border: 1px solid #dbe2ea;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar section {
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.35rem;
+  color: #1f3c88;
+}
+
+.section-note {
+  margin-top: 0;
+  margin-bottom: 18px;
+  line-height: 1.5;
+  color: #475569;
+}
+
+#quizSetup {
+  display: grid;
+  gap: 14px;
+}
+
+.form-row {
+  margin: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #c7d2de;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  color: #1f2937;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+  outline: 2px solid #b9cdf6;
+  outline-offset: 1px;
+  border-color: #1f3c88;
+}
+
+button {
+  background: #1f3c88;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #17306f;
+}
+
+.error-box {
+  min-height: 22px;
+  color: #b42318;
+  font-weight: 600;
+  margin: 0;
+}
+
+.form-actions {
+  margin-top: 2px;
+}
+
+.summary-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.summary-section p,
+.results-section p {
+  margin: 0;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.quiz-header {
+  margin-bottom: 18px;
+}
+
+/* The timer now uses the same card rhythm as the other sidebar content. */
+.timer-box {
+  width: 100%;
+  padding: 18px 16px;
+  text-align: center;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #eef4ff 0%, #e6f0ff 100%);
+  border: 1px solid #c8d8f2;
+  box-shadow: 0 2px 8px rgba(31, 60, 136, 0.08);
+}
+
+.timer-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #1f3c88;
+}
+
+#quizClock {
+  width: 80px;
+  padding: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  background: transparent;
+  color: #1f3c88;
+}
+
+.questions-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* One visual card per question avoids the double-boxed Week 7 layout. */
+.question-row {
+  margin: 0;
+  padding: 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #fafbfc;
+}
+
+.question-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.question-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748b;
+}
+
+.question-text {
+  width: 100%;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.question-text label {
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.question-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.question-input input[type="text"],
+.question-row input[type="text"] {
+  width: 100%;
+  max-width: 160px;
+  padding: 9px 10px;
+  font-size: 1rem;
+}
+
+.question-row input.wronganswer {
+  background: #fde8e8;
+  border-color: #f5a5a5;
+  color: #991b1b;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .app-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .timer-box {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 16px 12px 32px;
+  }
+
+  section,
+  .timer-box {
+    padding: 16px;
+  }
+
+  .question-row {
+    padding: 14px;
+  }
+
+  .question-input input[type="text"],
+  .question-row input[type="text"] {
+    max-width: 100%;
+  }
+}
